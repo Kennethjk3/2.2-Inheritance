@@ -38,16 +38,17 @@ class Fire_type < Pokemon
     type = "Fire"
   end
   
-  def defence
-    if pokemo
+  # def defence
+  #   if pokemon
+  # end
 
   def flamethrower
     flamethrower = attack + 5
   end
 
-  def attack(pokemon)
-    attack =
-  end
+  # def attack(pokemon)
+  #   attack =
+  # end
 end
 
 
