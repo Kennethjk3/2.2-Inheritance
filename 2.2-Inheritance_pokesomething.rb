@@ -1,16 +1,22 @@
 class Pokemon
-  attr_accessor :is_alive, :type, :defence, :attack
-# :name, :level,
+  attr_accessor :is_alive, :type, :defence, :attack, :name, :move
+# :level,
 
-  def initialize
-    puts 'I Choose You '
+  def initialize (name)
     @is_alive = true
+    self.defence = 10
+    self.attack = 10
+    self.name = "Who's That Pokemon?"
   end
 
-  def battle(wild_pokemon)
-    defence = wild_pokemon.defence
+  # def name(pokemon)
+  #   name = pokemon.name
+  # end
+
+  def battle(pokemon)
+    defence = pokemon.defence
     if @attack > defence
-      wild_pokemon.is_alive = false
+      pokemon.is_alive = false
       puts "Ken uses Master Ball"
       print " ... \n ... \n ..."
       puts "Pokemon was caught!"
@@ -26,12 +32,36 @@ end
 
 #######################
 class Fire_type < Pokemon
-  attr_accessor :type
+  attr_accessor :type, :burn
 
-  def initialize
-    @type = "Fire"
+  def type
+    type = "Fire"
+  end
+  
+  def defence
+    if pokemo
+
+  def flamethrower
+    flamethrower = attack + 5
   end
 
+  def attack(pokemon)
+    attack =
+  end
+end
+
+
+class Charmander < Fire_type
+  def name
+    name = "I Choose You Charmander"
+  end
+end
+
+puts charmander = Charmander.new(charmander)
+puts charmander.name
+puts charmander.attack
+puts charmander.flamethrower
+###############################################
   # def firebattle(wild_pokemon)
   #   puts "HEY YOU! Did You Look at my Shoes!?!\n"
   #   puts "Pokemon Trainer Wants to Battle for no reason\n"
@@ -42,7 +72,7 @@ class Fire_type < Pokemon
   #     puts "Ha Ha that will teach you to look at another's Shoes"
   #   end
   # end
-end
+# end
 
 class Water_type < Pokemon
   attr_accessor :type
@@ -67,13 +97,13 @@ end
 # charmander.type
 # charmander.attack = 10
 # charmander.defence = 10
-# 
+#
 # squirtle = Water_type.new
 # # squirtle.name
 # squirtle.type
 # squirtle.attack = 10
 # squirtle.defence = 10
-# 
+#
 # charmander.battle(squirtle)
 # # ####################################
 # # class Dog < Mammal
@@ -122,3 +152,4 @@ end
 # #     super(new_gender)
 # #   end
 # end
+
